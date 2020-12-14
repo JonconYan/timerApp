@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		EEC4430A2587444700BBBD60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC443092587444700BBBD60 /* AppDelegate.m */; };
 		EEC4430D2587444700BBBD60 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC4430C2587444700BBBD60 /* SceneDelegate.m */; };
-		EEC443102587444700BBBD60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC4430F2587444700BBBD60 /* ViewController.m */; };
-		EEC443132587444700BBBD60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC443112587444700BBBD60 /* Main.storyboard */; };
 		EEC443152587444A00BBBD60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEC443142587444A00BBBD60 /* Assets.xcassets */; };
 		EEC443182587444A00BBBD60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC443162587444A00BBBD60 /* LaunchScreen.storyboard */; };
 		EEC4431B2587444A00BBBD60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC4431A2587444A00BBBD60 /* main.m */; };
 		EEC443252587444A00BBBD60 /* timerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC443242587444A00BBBD60 /* timerAppTests.m */; };
 		EEC443302587444A00BBBD60 /* timerAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC4432F2587444A00BBBD60 /* timerAppUITests.m */; };
+		EEC443572587492100BBBD60 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC443562587492100BBBD60 /* TimerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +40,6 @@
 		EEC443092587444700BBBD60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EEC4430B2587444700BBBD60 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		EEC4430C2587444700BBBD60 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		EEC4430E2587444700BBBD60 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EEC4430F2587444700BBBD60 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EEC443122587444700BBBD60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EEC443142587444A00BBBD60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEC443172587444A00BBBD60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEC443192587444A00BBBD60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +50,8 @@
 		EEC4432B2587444A00BBBD60 /* timerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = timerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC4432F2587444A00BBBD60 /* timerAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = timerAppUITests.m; sourceTree = "<group>"; };
 		EEC443312587444A00BBBD60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEC443552587492100BBBD60 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		EEC443562587492100BBBD60 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,13 +106,12 @@
 				EEC443092587444700BBBD60 /* AppDelegate.m */,
 				EEC4430B2587444700BBBD60 /* SceneDelegate.h */,
 				EEC4430C2587444700BBBD60 /* SceneDelegate.m */,
-				EEC4430E2587444700BBBD60 /* ViewController.h */,
-				EEC4430F2587444700BBBD60 /* ViewController.m */,
-				EEC443112587444700BBBD60 /* Main.storyboard */,
 				EEC443142587444A00BBBD60 /* Assets.xcassets */,
 				EEC443162587444A00BBBD60 /* LaunchScreen.storyboard */,
 				EEC443192587444A00BBBD60 /* Info.plist */,
 				EEC4431A2587444A00BBBD60 /* main.m */,
+				EEC443552587492100BBBD60 /* TimerViewController.h */,
+				EEC443562587492100BBBD60 /* TimerViewController.m */,
 			);
 			path = timerApp;
 			sourceTree = "<group>";
@@ -241,7 +238,6 @@
 			files = (
 				EEC443182587444A00BBBD60 /* LaunchScreen.storyboard in Resources */,
 				EEC443152587444A00BBBD60 /* Assets.xcassets in Resources */,
-				EEC443132587444700BBBD60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEC443102587444700BBBD60 /* ViewController.m in Sources */,
 				EEC4430A2587444700BBBD60 /* AppDelegate.m in Sources */,
+				EEC443572587492100BBBD60 /* TimerViewController.m in Sources */,
 				EEC4431B2587444A00BBBD60 /* main.m in Sources */,
 				EEC4430D2587444700BBBD60 /* SceneDelegate.m in Sources */,
 			);
@@ -305,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EEC443112587444700BBBD60 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EEC443122587444700BBBD60 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EEC443162587444A00BBBD60 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
