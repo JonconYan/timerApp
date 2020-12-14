@@ -80,24 +80,27 @@
     _timeLabel.text = @"00:00:00";
     [self.view addSubview:_timeLabel];
     
-    _startBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    _startBtn = [[UIButton alloc] init];
     _startBtn.frame = CGRectMake(BUTTON_INSERT, BOTTOM_Y(_timeLabel) + 30, BUTTON_WIDTH, BUTTON_HEIGHT);
     [_startBtn setTitle:@"开始" forState:UIControlStateNormal];
-    [_startBtn setTitle:@"停止" forState:UIControlStateSelected | UIControlStateHighlighted];
+    [_startBtn setTitle:@"停止" forState:UIControlStateSelected];
     [_startBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [_startBtn setTitleColor:[UIColor redColor] forState:UIControlStateSelected | UIControlStateHighlighted];
+    [_startBtn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+    [_startBtn addTarget:self action:@selector(startBtnTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_startBtn];
 
-    _countBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    _countBtn = [[UIButton alloc] init];
     _countBtn.frame = CGRectMake(RIGHT_X(_startBtn) + BUTTON_INSERT, _startBtn.frame.origin.y, BUTTON_WIDTH, BUTTON_HEIGHT);
     [_countBtn setTitle:@"计次" forState:UIControlStateNormal];
     [_countBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_countBtn addTarget:self action:@selector(countBtnTapped) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_countBtn];
 
-    _clearBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    _clearBtn = [[UIButton alloc] init];
     _clearBtn.frame = CGRectMake(RIGHT_X(_countBtn) + BUTTON_INSERT, _startBtn.frame.origin.y, BUTTON_WIDTH, BUTTON_HEIGHT);
     [_clearBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_clearBtn setTitle:@"清零" forState:UIControlStateNormal];
+    [_clearBtn addTarget:self action:@selector(clearBtnTapped) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_clearBtn];
 
     _tableView = [[UITableView alloc] init];
@@ -112,6 +115,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setUpUI];
+}
+
+- (void)startBtnTapped:(UIButton *)sender
+{
+    if(sender.selected)
+    {
+        NSLog(@"stopBtnTapped");
+        sender.selected = NO;
+    }
+    else
+    {
+        NSLog(@"startBtnTapped");
+        sender.selected = YES;
+    }
+}
+
+- (void)countBtnTapped
+{
+    NSLog(@"countBtnTapped");
+}
+
+- (void)clearBtnTapped
+{
+    NSLog(@"clearBtnTapped");
 }
 
 @end
